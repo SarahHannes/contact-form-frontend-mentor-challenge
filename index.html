@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+  
+  <title>Contact form</title>
+
+</head>
+<body>
+  <div id="alert-container"></div>
+  
+  <form action="" class="form-main">
+    <h1>Contact Us</h1>
+    <div class="formbody align-row">
+      <div class="input-option">
+        <label for="first-name">First Name <span class="green-text">*</span></label><br>
+        <input class="text-input name" type="text" name="first-name" id="first-name" required />
+      </div>
+
+      <div class="input-option">
+        <label for="last-name">Last Name <span class="green-text">*</span></label><br>
+        <input class="text-input name" type="text" name="last-name" id="last-name" required />
+      </div>
+      
+    </div>
+    
+    <div class="formbody">
+      <label for="email">Email Address <span class="green-text">*</span></label><br>
+      <input class="text-input email" type="email" name="email" id="email" required />
+    </div>
+
+    <div class="formbody">
+      <label for="Query Type">Query Type <span class="green-text">*</span></label>
+      <div class="align-row">
+        <div class="input-option radio-option">
+          <input type="radio" id="general_enquiry" class="check-input" name="query_request" value="general_enquiry">
+          <label for="general_enquiry">General Enquiry</label><br>
+        </div>
+        <div class="input-option radio-option">
+          <input type="radio" id="support_request" class="check-input" name="query_request" value="support_request">
+          <label for="support_request">Support Request</label><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="formbody">
+      <label for="message">Message </label><span class="green-text">*</span><br>
+      <textarea type="message" name="message" id="message" required></textarea>
+    </div>
+
+    <div class="formbody">
+      <input type="checkbox" id="consent" name="consent" value="consent" class="check-input" required>
+      <label for="consent-true">I consent to being contacted by the team</label>
+      <span class="green-text">*</span>
+    </div>
+
+    <div class="formbody">
+      <input onclick="alertHandler()" class="submit-button" type="value" value="Submit" />
+    </div>
+  </form>
+  
+
+  <script src="./index.js"></script>
+</body>
+</html>
